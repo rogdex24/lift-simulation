@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lift Simulation Assignment</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="inputContainer" class="inputContainer">
+      <div class="form-container">
+        <h1>Lift Simulation</h1>
+      </div>
+      <br />
+      <form action="">
+        <label for="floors">Floors:</label>
+        <input
+          type="number"
+          id="num_floors"
+          name="floors"
+          min="1"
+          placeholder="Floors"
+          required
+        />
+
+        <label for="Lifts">Lifts:</label>
+
+        <input
+          type="number"
+          id="num_lifts"
+          name="lifts"
+          min="1"
+          placeholder="Lifts"
+          required
+        />
+        <input type="submit" value="Generate" />
+      </form>
+    </div>
+
+    <div id="liftSimulation" class="liftSimulation"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

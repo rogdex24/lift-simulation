@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: block;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+  margin: 20px auto;
+  background-image: linear-gradient(to bottom, #000000, #ffffff);
+  background-attachment: fixed;
+}
+
+.inputContainer {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form-container h1 {
+  text-align: center;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #333;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+#backBtnDiv {
+  text-align: center;
+  display: none;
+}
+#backBtn {
+  border-radius: 5px;
+  width: fit-content;
+  padding: 3px;
+  margin: 0 auto;
+}
+#backBtn:hover {
+  cursor: pointer;
+  background-color: #e0e0e0;
+  transform: scale(1.1);
+}
+.liftSimulation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  /* background-color: beige; */
+  flex-direction: column;
+  margin: 150px auto 30px; /* Increase top margin */
+  width: 90%;
+  height: max-content;
+  border-left: 2px solid #ffffff;
+  /* border-bottom: 2px solid #ffffff; */
+}
+
+.floor {
+  width: 100%;
+  background-color: rgba(57, 18, 155, 0);
+  display: flex;
+  flex-direction: row;
+  height: 90px;
+  border-bottom: 1px solid #ffffff;
+  position: relative;
+}
+
+.lift-labels {
+  min-width: 100px;
+  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  padding: 5px auto;
+  color: #ffffff;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container {
+  width: fit-content;
+  /* padding: 5px; */
+  /* margin: 5px auto; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.lift-labels > span {
+  width: 100%;
+  display: flex;
+}
+
+.upBtn,
+.downBtn {
+  margin: 3px auto;
+  width: 50px;
+
+  height: 30px;
+  font-weight: bolder;
+}
+.upBtn {
+  background-color: #ffffff;
+  color: #000000;
+}
+.downBtn {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.lift {
+  height: 100%;
+  width: 60px;
+  background-color: #ffffff;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.left-door,
+.right-door {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  overflow: hidden;
+  border: 1px solid #000000;
+}
+
+.left-door-open {
+  transform: translateX(-100%);
+  transition: transform 2000ms linear;
+}
+
+.right-door-open {
+  transform: translateX(100%);
+  transition: transform 2000ms linear;
+}
+
+.left-door-close {
+  transform: translateX(0%);
+  transition: transform 2000ms linear;
+}
+
+.right-door-close {
+  transform: translateX(0%);
+  transition: transform 2000ms linear;
+}
+
+@media (max-width: 400px) {
+  .lift {
+    width: 50px;
+  }
+}
+.lift {
+  width: calc(100%);
+  max-width: 80px; /* Set a reasonable maximum width */
+  min-width: 50px; /* Set a minimum width to prevent them from becoming too thin */
+  height: 90px; /* Adjust as necessary */
+  border: 2px solid #000000;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+.lift-container {
+  width: 100%; /* Make sure the container takes up the full width */
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between; /* Adjust spacing between lifts */
+  align-items: center; /* Center align the lifts vertically */
+  position: relative;
+}
+.upBtn.active-up,
+.downBtn.active-down {
+  background-color: #000000;
+  color: #ffffff;
+}
